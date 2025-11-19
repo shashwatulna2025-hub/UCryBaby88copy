@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Global Branch Locations</title>
+
+  <!-- Leaflet CSS , this includes map and its styles for the map -->
+  <!-- Generally real google maps Api is not available (freely ) so this is its alternative -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <link rel="stylesheet" href="branches.css"> 
+  
+</head>
+<body>
+
+
+<div class="title-row">
+  <div class="globe">
+    <img src="12.jpg" alt="Globe">
+  </div>
+
+  <h2 class="title-text">Global Branch Locations</h2>
+</div>
+
+  <div id="mapCanvas"></div>
+
+  <div class="place-list">
+    <h3>📌 Branches Around the World</h3>
+    <ul id="branchList"></ul>
+  </div>
+
+  <!-- Leaflet JS map .. -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+    const branches = [
+      { title: "HQ - Mumbai, India", lat: 19.076, lng: 72.8777 },
+      { title: "New York, USA", lat: 40.7128, lng: -74.006 },
+      { title: "London, UK", lat: 51.5074, lng: -0.1278 },
+      { title: "Tokyo, Japan", lat: 35.6895, lng: 139.6917 },
+      { title: "Dubai, UAE", lat: 25.2048, lng: 55.2708 },
+      { title: "Johannesburg, South Africa", lat: -26.2041, lng: 28.0473 },
+      { title: "Sydney, Australia", lat: -33.8688, lng: 151.2093 },
+      { title: "Toronto, Canada", lat: 43.6532, lng: -79.3832 },
+      { title: "Singapore", lat: 1.3521, lng: 103.8198 },
+      { title: "Berlin, Germany", lat: 52.52, lng: 13.405 }
+    ];
+
+    // Initialize map
+    const map = L.map('mapCanvas').setView([20, 0], 2);
+
+    // Add OpenStreetMap tiles (FREE)  map 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18
+    }).addTo(map);
+
+    // Add markers , important hai this ...
+    branches.forEach(branch => {
+      L.marker([branch.lat, branch.lng])
+        .addTo(map)
+        .bindPopup(`<b>${branch.title}</b>`);
+    });
+
+    // Display list
+    const list = document.getElementById("branchList");
+    branches.forEach(b => {
+      list.innerHTML += `<li>${b.title}</li>`;
+    });
+  </script>
+
+</body>
+</html>

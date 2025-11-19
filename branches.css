@@ -1,0 +1,171 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* position: relative; */
+}
+
+
+
+/*  Page Styling */
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #90caf9);
+  color: #0d47a1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+}
+
+/* Globe Container Positioned to the Left */
+.globe-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Container that holds both globe + text */
+.title-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  gap: 15px;                 
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Globe Style */
+.globe {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #90caf9;
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.25),
+    0 0 20px rgba(0,136,255,0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(2deg);
+  animation: globeFloat 3s ease-in-out infinite;
+}
+
+.globe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Animation */
+@keyframes globeFloat {
+  0%   { transform: translateY(0) rotate(2deg); }
+  50%  { transform: translateY(-8px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(2deg); }
+}
+
+/*  Map Container Styling */
+#mapCanvas {
+  width: 90%;
+  max-width: 1000px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 4px solid #bbdefb;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/*  Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  Responsive Design */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  #mapCanvas {
+    height: 400px;
+    width: 95%;
+  }
+}
+
+/* Stylish Heading */
+h2 {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(90deg, #0d47a1, #42a5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+#mapCanvas {
+  width: 95%;
+  height: 550px;
+  max-width: 1200px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border: 4px solid #bbdefb;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.place-list {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 900px;
+  background: #ffffffdd;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.place-list h3 {
+  margin: 0 0 15px;
+  color: #0d47a1;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.place-list ul {
+  padding-left: 20px;
+  line-height: 32px;
+  font-size: 18px;
+}
+

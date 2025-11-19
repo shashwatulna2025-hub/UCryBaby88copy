@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Office Metro Log X</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--  Start Screen ka code here write karo hai -->
+  <div class="start-screen" id="startScreen">
+
+  <!-- inside start screen : Logo ka code here write karo hai  -->
+    <img src="1.jpg" class="app-logo" alt="App Logo">
+
+    <h1>Welcome to Office Metro Log X</h1>
+    <p>Track attendance, manage records, and view branches worldwide.</p>
+    <p>Click below to begin</p>
+    <button onclick="showLogin()">Start</button>
+  </div>
+
+  <!-- Login Section  ka code here write karo hai  -->
+  <div class="login-section hidden" id="loginSection">
+    <div class="login-box">
+      <h2>Employee Login</h2>
+      <input type="text" id="loginName" placeholder="Enter Username" required />
+      <input type="password" id="loginPass" placeholder="Enter Password" required />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- inside login section :-  Decorative Images ka code here write karo hai  -->
+  <div class="image-gallery">
+    <div class="image-row top-row">
+        <img src="7.webp" alt="login image 1 "class="wave-down">
+        <img src="4.jpg" alt="login image 2"  class="wave-up">
+        <img src="11.png" alt="login image 6" class="wave-mid">
+    </div>
+    <div class="image-row bottom-row">
+        <img src="5.png" alt="login image 3" class="wave-up">
+        <img src="10.webp" alt="login image 4" class="wave-mid">
+        <img src="6.png" alt="login image 5"   class="wave-down">
+        <img src="9.jpg" alt="login image 7"  class="wave-up">
+    </div>
+    </div>
+
+<!-- <img src="7.webp" class="wave-down">
+<img src="4.jpg" class="wave-up">
+<img src="11.png" class="wave-mid">
+
+<img src="5.png" class="wave-up">
+<img src="10.webp" class="wave-mid">
+<img src="6.png" class="wave-down">
+<img src="9.jpg" class="wave-up"> -->
+
+
+</div>
+
+  <!-- Dashboard (After Login) ka code here write karo hai -->
+  <div id="mainApp" class="hidden dashboard">
+    <header>
+      <h1 id="welcomeText">Welcome</h1>
+      <button id="logoutBtn" onclick="logout()">Logout</button>
+    </header>
+
+    <nav>
+      <a href="#" onclick="openPage('attendance.html')">Fill Attendance</a>
+      <a href="#" onclick="openPage('records.html')">Monthly Report</a>
+      <a href="#" onclick="openPage('branches.html')">Branches</a>
+    </nav>
+
+    <div class="dashboard-content">
+      <h2>Dashboard Overview</h2>
+      <p>Explore and manage all your company's attendance activities from here.</p>
+    </div>
+
+  <!-- Decorative Waves Images ka code here write karo hai  -->
+<div class="wave-row">
+    <img src="3.jpg" class="wave-img up" alt="">
+    <img src="1.webp" class="wave-img down" alt="">
+    <img src="2.jpg" class="wave-img up" alt="">
+    <img src="8.jpg" class="wave-img down" alt="">
+</div>
+
+
+</div>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+/* page styling */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #90caf9);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* form below the page hai , that page styling code here  */
+form {
+
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+  position:absolute;
+  top:100px;
+  left: 700px;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  padding-right: 100px;
+  position:absolute;
+  top:300px;
+  left: 50px;
+
+  background: linear-gradient(90deg, #0d47a1, #42a5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Labels : date , time , etc ke style */
+label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+/* Inputs and Select box */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #42a5f5;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
+  outline: none;
+}
+
+/* Button ke styling ka code  */
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1565c0, #2196f3);
+  transform: translateY(-2px);
+}
+
+/* Smooth animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,478 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #e3f2fd, #ffffff);
+  position: relative;
+}
+
+/* .start-screen,
+.end-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
+} */
+
+/*  Start Screen Styling */
+
+/* Logo Style */
+.app-logo {
+    width: 150px;             
+    height: 150px;
+    object-fit: cover;
+
+    border-radius: 20px;     
+    border: 3px solid #ffffff55;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+    margin-bottom: 0px;
+    transition: 0.4s ease;
+    animation: pop 1.2s ease;
+}
+
+/* Hover effect -  glow effect  */
+.app-logo:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(0, 140, 255, 0.45);
+    border: 3px solid #0095ff;
+}
+
+
+/* start screen coding here ...... */
+.start-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0d47a1, #42a5f5);
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+  overflow: hidden;
+}
+
+/*  Heading */
+.start-screen h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  animation: slideDown 1.2s ease;
+}
+
+/* Paragraphs */
+.start-screen p {
+  font-size: 18px;
+  margin: 8px 0;
+  opacity: 0.9;
+  animation: fadeInUp 1.4s ease;
+}
+
+/* Start Button */
+.start-screen button {
+  margin-top: 30px;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d47a1;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1.8s ease;
+}
+
+.start-screen button:hover {
+  background: #e3f2fd;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .start-screen h1 {
+    font-size: 30px;
+  }
+  .start-screen p {
+    font-size: 16px;
+  }
+  .start-screen button {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+}
+
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 12px 30px;
+  background: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+
+/* login page ke styling karne ka code here write keya hai   ...... */
+.login-box button {
+  padding: 12px 30px;
+  background:lightblue;
+  color:darkblue;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 1000;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #1565c0;
+}
+
+header {
+  background: #0d47a1;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.login-box h2 {
+    font-size: 28px;
+    font-weight: 700;
+    /* text-align: center; */
+    position: left;
+    color: #ffffff;
+    margin-bottom: 5px;
+    /* position: absolute;
+    left: 100px; */
+    position: relative;
+
+        text-shadow:  0 0 20px darkblue;
+                
+}
+
+
+
+nav {
+  background: #1565c0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+.app-shell {
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+}
+
+.form-section,
+.table-section,
+.map-section
+{
+  background: #ffffff;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-section 
+{
+  background: #ffffff;
+  padding: 25px;
+  padding-top: 5px;
+  margin: 20px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Login Section */
+.login-section {
+  background: linear-gradient(135deg, #2196f3, #bbdefb);
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+}
+
+/* Top & Bottom Image Rows */
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 24px;
+  margin: 10px 0;
+}
+
+/* Bigger Stylish Images */
+.image-row img {
+  width: 220px;
+  height: 168px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Wave Pattern */
+.wave-up {
+  transform: translateY(-20px);
+}
+
+.wave-down {
+  transform: translateY(20px);
+}
+
+.wave-mid {
+  transform: translateY(10px);
+}
+
+/* .top-row img:nth-child(1) { transform: translateY(20px); }
+.top-row img:nth-child(2) { transform: translateY(-20px); }
+.top-row img:nth-child(3) { transform: translateY(10px); }
+
+.bottom-row img:nth-child(1) { transform: translateY(-15px); }
+.bottom-row img:nth-child(2) { transform: translateY(10px); }
+.bottom-row img:nth-child(3) { transform: translateY(-20px); }
+.bottom-row img:nth-child(4) { transform: translateY(15px); } */
+
+/* Hover Zoom */
+.image-row img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .image-row img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-row {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .login-box {
+    width: 85%;
+    padding: 40px;
+  }
+}
+
+/* Dashboard page (after login page ) ka code here write keya hai   ...... */
+.dashboard {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: fadeInUp 1s ease;
+}
+
+/*  Header */
+.dashboard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dashboard header h1 {
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+
+    /* text-align: center; */
+    position: left;
+    color: #ffffff;
+    margin-bottom: 5px;
+    /* position: absolute;
+    left: 100px; */
+    position: relative;
+
+        text-shadow:  0 0 20px white;
+                
+}
+
+
+#logoutBtn {
+  background: #ff4d4d;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+#logoutBtn:hover {
+  background: #d93636;
+  transform: scale(1.05);
+}
+
+/* Dashboard Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 22px;
+  background: #4a90e2;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background: #3c7ec4;
+  transform: translateY(-3px);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dashboard-content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.dashboard-content p {
+  font-size: 18px;
+  color: #666;
+}
+
+.wave-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.wave-img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* WAVE EFFECT */
+.up {
+  margin-top: -15px;   /* goes slightly up */
+}
+
+.down {
+  margin-top: 15px;    /* goes slightly down */
+}
+
+
+
+/* #logoutBtn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background: #e53935;
+}
+#logoutBtn:hover {
+  background: #c62828;
+} */
+
+.map-legend {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.legend-item {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #eef4ff;
+  border: 1px solid #d6e7ff;
+}
